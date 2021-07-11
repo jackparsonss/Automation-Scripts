@@ -8,3 +8,6 @@ This is my repository where I put all my command line utility/automation scripts
 
 ###### toList.py:
 - This scripts takes a bunch of text that is copied to my cliboard and pastes new text to my cliboard as a markdown list
+
+###### passgen.py
+- Creates a strong random password and copies it on to the clipboard
