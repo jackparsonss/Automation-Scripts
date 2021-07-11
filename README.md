@@ -6,5 +6,5 @@ This is my repository where I put all my command line utility/automation scripts
 ###### mydb.py:
 - This script acts as a mini db where I can store key value pairs of whatever is currently on my clipboard with a key word
 
-###### tolist.py:
+###### toList.py:
 - This scripts takes a bunch of text that is copied to my cliboard and pastes new text to my cliboard as a markdown list
