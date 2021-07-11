@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# refer to Automate The Boring Stuff With Python Chapter 9 For Usage
 
 import shelve, pyperclip, sys
 
