@@ -3,43 +3,66 @@
 import shelve, pyperclip, sys
 
 
-def check_word(word):
-    return sys.argv[1].lower() == word
+class App:
+    def __init__(self, shelve):
+        self.shelve = shelve
+        self.options = {
+            "LIST": self.list,
+            "GET": self.get,
+            "SAVE": self.save,
+            "DELETE": self.delete,
+            "SHOW": self.show,
+        }
 
+    def run(self):
+        """
+        Entry point to app
+        """
+        self.options[sys.argv[1].upper()]()
 
-def show_list(shelve):
-    if check_word("list"):
-        pyperclip.copy(str(list(shelve.keys())))
+    def list(self):
+        """
+        Displays all keys in db
+        >>> mydb.py show
+        """
         print("Keys Stored In Vault:")
-        for key in shelve.keys():
+        for key in self.shelve.keys():
             print("-", key)
 
+    def get(self):
+        """
+        Copies value from given key
+        >>> mydb.py get key
+        """
+        pyperclip.copy(self.shelve[sys.argv[2]])
 
-def run_options(shelve):
-    if check_word("get"):
-        pyperclip.copy(shelve[sys.argv[2]])
+    def save(self):
+        """
+        Creates a new key value pair of the given key and what is on the users clipboard
+        >>> mydb.py save key
+        """
+        self.shelve[sys.argv[2]] = pyperclip.paste()
 
-    elif check_word("save"):
-        shelve[sys.argv[2]] = pyperclip.paste()
+    def delete(self):
+        """
+        Deletes key value pair of given key
+        >>> mydb.py delete key
+        """
+        self.shelve.pop(sys.argv[2])
 
-    elif check_word("delete"):
-        shelve.pop(sys.argv[2])
-
-    elif check_word("show"):
-        print(shelve[sys.argv[2]])
-
-
-def app(shelve):
-    if len(sys.argv) == 3:
-        run_options(shelve)
-    elif len(sys.argv) == 2:
-        show_list(shelve)
+    def show(self):
+        """
+        Displays value stored at given key
+        >>> mydb.py show key
+        """
+        print(self.shelve[sys.argv[2]])
 
 
 def main():
     with shelve.open("mydb") as mydb_shelf:
         try:
-            app(mydb_shelf)
+            app = App(mydb_shelf)
+            app.run()
         except:
             print("Key Not Found")
 
