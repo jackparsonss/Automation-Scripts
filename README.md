@@ -11,3 +11,6 @@ This is my repository where I put all my command line utility/automation scripts
 
 ###### passgen.py
 - Creates a strong random password and copies it on to the clipboard
+
+###### mapit.py
+- Takes an address either from the command line or clipboard and opens a browser at the address
