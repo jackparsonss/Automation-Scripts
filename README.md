@@ -14,3 +14,6 @@ This is my repository where I put all my command line utility/automation scripts
 
 ###### mapit.py
 - Takes an address either from the command line or clipboard and opens a browser at the address
+
+###### google.py
+- Googles everything that is given as command line arguments
