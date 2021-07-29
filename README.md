@@ -17,3 +17,6 @@ This is my repository where I put all my command line utility/automation scripts
 
 ###### google.py
 - Googles everything that is given as command line arguments
+
+###### getdocxtext.py
+- Takes a .docx file and copies all the text to your clipboard
