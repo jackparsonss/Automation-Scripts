@@ -2,3 +2,4 @@
 .vscode/
 mydb.db
 chromedriver
+__pycache__/
