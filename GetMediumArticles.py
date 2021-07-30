@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests, datetime, threading
 from bs4 import BeautifulSoup
 
