@@ -26,3 +26,6 @@ This is my repository where I put all my command line utility/automation scripts
 
 ###### Morning.py
 - Takes advantage of GetMediumArticles.py to open all apps I use in the morning and finishes by opening up my obsidian daily vault to a new daily note where it then gets filled with medium article links
+
+###### toObsidian.py
+- Takes all the files in my downloads folder and moves them into the resources folder in my obsidian vault
