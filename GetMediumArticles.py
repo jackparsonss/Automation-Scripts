@@ -21,6 +21,8 @@ class GetMediumArticles:
             "UX Planet": "https://uxplanet.org/archive/",
             "Better Programming": "https://betterprogramming.pub/",
             "Netflix": "https://netflixtechblog.com/",
+            "Level Up Coding": "https://levelup.gitconnected.com/",
+            "Daily JS": "https://medium.com/dailyjs",
         }
 
         self.data = {}
