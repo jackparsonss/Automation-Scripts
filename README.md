@@ -29,3 +29,6 @@ This is my repository where I put all my command line utility/automation scripts
 
 ###### toObsidian.py
 - Takes all the files in my downloads folder and moves them into the resources folder in my obsidian vault
+
+##### advice.py
+- Generates a random piece of advice on every run
